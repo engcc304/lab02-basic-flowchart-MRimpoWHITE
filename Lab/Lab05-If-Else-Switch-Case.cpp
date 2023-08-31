@@ -116,13 +116,19 @@ int main()
         printf("Bill Total = %d\n Input Money : ", sum);
         scanf("%d", &MI1);
 
+<<<<<<< HEAD
         int nc , mc ;
+=======
+        int nc, mc;
+        int M500 = 50, M100 = 50, M50 = 50, M20 = 50, M10 = 50, M5 = 50, M1 = 50;
+>>>>>>> 753ea75ed38f5677710b070c0fa37bc9e6488065
 
         if (MI1 == sum)
         {
             printf("Thank you <3");
             break;
         }
+<<<<<<< HEAD
         else if(MI1 < sum)
         {
            while (MI1 != sum && MI2+MI1 < sum)
@@ -143,6 +149,43 @@ int main()
 
 
     } while(Ip);
+=======
+        else if (MI1 < sum)
+        {
+            while (MI1 != sum && MI2 + MI1 < sum)
+            {
+                nc = sum - MI1;
+                printf("Bill Total left= %d\nInput Money : ", nc);
+                scanf("%d", &MI2);
+                MI1 += MI2;
+                if (MI1 == sum)
+                {
+                    printf("Thank you <3");
+                }
+            }
+        }
+        else if (MI1 > sum)
+        {
+            printf("your change = %d", MI1 - sum);
+            do
+            {
+                mc = MI1 - sum;
+                if (mc >= 500)
+                {
+                    printf("\n500 baht");
+                    sum -= 500;
+                    M500--;
+                }
+                else if (mc >= 100)
+                {
+                    /* code */
+                }
+
+            } while (mc != 0);
+        }
+
+    } while (Ip);
+>>>>>>> 753ea75ed38f5677710b070c0fa37bc9e6488065
 
     return 0;
 } // end main function
